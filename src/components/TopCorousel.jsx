@@ -1,5 +1,5 @@
 import React from 'react';
-import OwlCarousel from 'react-owl-carousel';
+import OwlCarousel from 'react-owl-carousel2';
 import carousel1 from "../assets/img/carousel-1.jpg";
 import carousel2 from "../assets/img/carousel-2.jpg";
 import 'owl.carousel/dist/assets/owl.carousel.css';

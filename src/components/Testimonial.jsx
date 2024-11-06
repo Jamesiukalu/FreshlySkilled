@@ -4,8 +4,7 @@ import testimonial1 from '../assets/img/testimonial-1.jpg' ;
 import testimonial2 from '../assets/img/testimonial-2.jpg' ;
 import testimonial3 from '../assets/img/testimonial-3.jpg' ;
 import testimonial4 from '../assets/img/testimonial-4.jpg' ;
-
-import OwlCarousel from 'react-owl-carousel';
+import OwlCarousel from 'react-owl-carousel2';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
