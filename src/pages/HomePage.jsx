@@ -6,9 +6,9 @@ import $ from 'jquery';
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Header from '../components/Header';
 import Testimonial from '../components/Testimonial';
 import Jobs from '../components/Jobs';
-import TopCorousel from '../components/TopCorousel';
 import ITJobSearch from '../components/ITJobSearch';
 import About from '../components/ITJobSearch';
 import Category from '../components/Category';
@@ -64,7 +64,7 @@ const HomePage = () => {
             <div className="container-xxl bg-white p-0">       
 
         <Navbar />
-        <TopCorousel />
+        <Header />
         <ITJobSearch />
         <Category />
         <About />
