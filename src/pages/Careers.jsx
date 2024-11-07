@@ -8,7 +8,6 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Testimonial from '../components/Testimonial';
 import Jobs from '../components/Jobs';
-import TopCorousel from '../components/TopCorousel';
 import ITJobSearch from '../components/ITJobSearch';
 import About from '../components/ITJobSearch';
 import Category from '../components/Category';

@@ -9,7 +9,6 @@ import Footer from '../components/Footer';
 import Testimonial from '../components/Testimonial';
 import Jobs from '../components/Jobs';
 import ToggleLike from '../components/ToggleLike';
-import TopCorousel from '../components/TopCorousel';
 import ITJobSearch from '../components/ITJobSearch';
 import About from '../components/ITJobSearch';
 import Category from '../components/Category';
