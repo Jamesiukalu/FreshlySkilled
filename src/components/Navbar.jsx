@@ -1,10 +1,17 @@
 import { NavLink } from 'react-router-dom';
+import logo from '../assets/img/Tech brand5.png'
 
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
             <NavLink to="/" className="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
-                <h1 className="m-0 text-primary">Techtalize</h1>
+                {/* <h1 className="m-0 text-primary">Techtalize</h1> */}
+                <img 
+                src={logo} 
+                alt="Techtalize Logo" 
+                className="img-fluid" 
+                style={{ maxHeight: '40px' }} 
+            />
             </NavLink>
             <button type="button" className="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span className="navbar-toggler-icon"></span>
