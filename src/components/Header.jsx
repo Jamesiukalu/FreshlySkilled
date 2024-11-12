@@ -7,6 +7,7 @@ import bogliasco from '../assets/img/hero1.jpg';
 import countyClare from '../assets/img/hero2.jpg';
 import craterRock from '../assets/img/hero3.jpg';
 import giauPass from '../assets/img/hero4.jpg';
+import { Link } from "react-router-dom";
 
 // const bogliasco = "bogliasco";
 // const countyClare = "countyClare";
@@ -40,6 +41,9 @@ export default function Header() {
               <Subtitle>
               Gain practical experience, valuable insights, and professional
               networking opportunities to propel your tech career forward.
+              <br/>
+              <Link to="/signup" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Start Your Career</Link>
+              {/* <Link to="" className="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Find A Talent</Link> */}
               </Subtitle>
             </Wrapper>
           </Overlay>
