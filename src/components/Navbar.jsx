@@ -1,11 +1,10 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
             <NavLink to="/" className="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
-                <h1 className="m-0 text-primary">Freshlyskilled</h1>
+                <h1 className="m-0 text-primary">Techtalize</h1>
             </NavLink>
             <button type="button" className="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span className="navbar-toggler-icon"></span>
@@ -27,7 +26,7 @@ const Navbar = () => {
                     <NavLink to="/job-list" className={({ isActive }) => isActive ? "nav-item nav-link active" : "nav-item nav-link"}>Apply</NavLink>
                     <NavLink to="/testimonialPage" className={({ isActive }) => isActive ? "nav-item nav-link active" : "nav-item nav-link"}>Testimonial</NavLink>
                     <div className="nav-item dropdown">
-                        <a href="#" className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">What's New</a>
+                        <a href="#" className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">What&apos;s New</a>
                         <div className="dropdown-menu rounded-0 m-0">
                             <NavLink to="/job-categories" className={({ isActive }) => isActive ? "dropdown-item active" : "dropdown-item"}>Our Programs</NavLink>
                             <NavLink to="/partners" className={({ isActive }) => isActive ? "dropdown-item active" : "dropdown-item"}>Our Partners</NavLink>

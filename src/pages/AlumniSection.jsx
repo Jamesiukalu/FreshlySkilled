@@ -1,19 +1,13 @@
-import React, { useState , useEffect } from 'react';
-import logo from "../assets/img/logo.png";
+import { useState , useEffect } from 'react';
 import { BounceLoader } from 'react-spinners';
 import WOW from 'wow.js';
 import $ from 'jquery';
 import Hero from '../components/Hero';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import Testimonial from '../components/Testimonial';
-import Jobs from '../components/Jobs';
-import ITJobSearch from '../components/ITJobSearch';
-import About from '../components/ITJobSearch';
-import Category from '../components/Category';
 
 const AlumniSection = () => {
-    const [loading, setLoading] = useState(true);    const [category, setCategory] = useState('');      
+    const [loading, setLoading] = useState(true);
     const breadcrumbs = [
       { name: 'Home', link: '/' },
       { name: 'About Us' },
@@ -61,7 +55,7 @@ const AlumniSection = () => {
               id="spinner"
               className="spinner-container show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
             >
-              <BounceLoader color="#36D7B7" loading={loading} size={150} role="status" />
+              <BounceLoader color="#007AFF" loading={loading} size={150} role="status" />
             </div>
           ) : (
             <div className="container-xxl bg-white p-0">
@@ -74,7 +68,7 @@ const AlumniSection = () => {
             <div className="container text-center">
                 <h1 className="display-4 wow fadeInUp" data-wow-delay="0.1s" style={{color: '#343a40'}}>Oops! Nothing Here...</h1>
                 <p className="lead wow fadeInUp" data-wow-delay="0.3s" style={{color: '#6c757d'}}>
-                    It seems we can't find what you're looking for. This page is currently empty.
+                    It seems we can&apos;t find what you&apos;re looking for. This page is currently empty.
                 </p>
                 <div className="mb-4 wow fadeInUp" data-wow-delay="0.5s">
                     <i className="bi bi-exclamation-triangle display-1 text-primary"></i>

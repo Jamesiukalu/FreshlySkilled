@@ -1,5 +1,4 @@
-import React, { useState , useEffect } from 'react';
-import logo from "../assets/img/logo.png";
+import { useState , useEffect } from 'react';
 import { BounceLoader } from 'react-spinners';
 import WOW from 'wow.js';
 import $ from 'jquery';
@@ -9,12 +8,12 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Testimonial from '../components/Testimonial';
 import Jobs from '../components/Jobs';
-import ITJobSearch from '../components/ITJobSearch';
+// import ITJobSearch from '../components/ITJobSearch';
 import About from '../components/ITJobSearch';
 import Category from '../components/Category';
 
 const HomePage = () => {
-    const [loading, setLoading] = useState(true);    const [category, setCategory] = useState('');      
+    const [loading, setLoading] = useState(true);    
    
 // Simulate loading process
     useEffect(() => {
@@ -58,14 +57,14 @@ const HomePage = () => {
               id="spinner"
               className="spinner-container show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
             >
-              <BounceLoader color="#36D7B7" loading={loading} size={150} role="status" />
+              <BounceLoader color="#007AFF" loading={loading} size={150} role="status" />
             </div>
           ) : (
             <div className="container-xxl bg-white p-0">       
 
         <Navbar />
         <Header />
-        <ITJobSearch />
+        {/* <ITJobSearch /> */}
         <Category />
         <About />
         <Jobs />

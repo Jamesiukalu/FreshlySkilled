@@ -1,31 +1,11 @@
-import React, { useState , useEffect } from 'react';
-import logo from "../assets/img/logo.png";
-import { BounceLoader } from 'react-spinners';
+import { useEffect } from 'react';
 import WOW from 'wow.js';
 import $ from 'jquery';
 import Hero from '../components/Hero';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import Testimonial from '../components/Testimonial';
-import Jobs from '../components/Jobs';
-import ITJobSearch from '../components/ITJobSearch';
-import About from '../components/ITJobSearch';
-import Category from '../components/Category';
 
 const Accessibility = () => {
-    const [loading, setLoading] = useState(true);    const [category, setCategory] = useState('');      
-    const breadcrumbs = [
-      { name: 'Home', link: '/' },
-      { name: 'About Us' },
-      { name: 'Accessibility', active: true },
-    ];
-// Simulate loading process
-    useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000); // After 1 second, hide the spinner
-    }, []);
-
     useEffect(() => {
         // Initialize WOW.js
         new WOW().init();
@@ -56,25 +36,16 @@ const Accessibility = () => {
 
     return (
         <>
-          {loading ? (
-            <div
-              id="spinner"
-              className="spinner-container show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-            >
-              <BounceLoader color="#36D7B7" loading={loading} size={150} role="status" />
-            </div>
-          ) : (
-            <div className="container-xxl bg-white p-0">
-         
+        <div className="container-xxl bg-white p-0">        
 
           <Navbar />
-          <Hero  title="Page Name" breadcrumbs={breadcrumbs}/>
+          <Hero  title="Accessibility" />
           
         <div className="container-xxl py-5">
             <div className="container text-center">
-                <h2 className="mb-5 wow fadeInUp" data-wow-delay="0.1s">Accessibility at FreshlySkilled</h2>
+                <h2 className="mb-5 wow fadeInUp" data-wow-delay="0.1s">Accessibility at Techtalize</h2>
                 <p className="lead wow fadeInUp" data-wow-delay="0.3s" style={{color: '#6c757d'}}>
-                    At FreshlySkilled, we are committed to ensuring that our platform is accessible to all users, including individuals with disabilities. We believe that everyone deserves equal access to our services and opportunities, and we strive to create an inclusive environment where all talents can thrive.
+                    At Techtalize, we are committed to ensuring that our platform is accessible to all users, including individuals with disabilities. We believe that everyone deserves equal access to our services and opportunities, and we strive to create an inclusive environment where all talents can thrive.
                 </p>
                 <h3 className="mt-4 mb-3 wow fadeInUp" data-wow-delay="0.5s" style={{color: '#343a40'}}>Our Accessibility Standards</h3>
                 <p className="mb-4 wow fadeInUp" data-wow-delay="0.7s" style={{color: '#6c757d'}}>
@@ -102,11 +73,11 @@ const Accessibility = () => {
                 </ul>
                 <h3 className="mt-4 mb-3 wow fadeInUp" data-wow-delay="2.1s" style={{color: '#343a40'}}>Contact Us for Support</h3>
                 <p className="mb-4 wow fadeInUp" data-wow-delay="2.3s" style={{color: '#6c757d'}}>
-                    If you encounter any accessibility issues or have suggestions for improvement, please reach out to us at <a href="mailto:support@freshlyskilled.com" style={{color: '#007bff'}}>support@freshlyskilled.com</a>. We value your feedback and are here to assist you.
+                    If you encounter any accessibility issues or have suggestions for improvement, please reach out to us at <a href="mailto:support@Techtalize.com" style={{color: '#007bff'}}>support@Techtalize.com</a>. We value your feedback and are here to assist you.
                 </p>
                 <h3 className="mt-4 mb-3 wow fadeInUp" data-wow-delay="2.5s" style={{color: '#343a40'}}>Join Us in Promoting Accessibility</h3>
                 <p className="mb-4 wow fadeInUp" data-wow-delay="2.7s" style={{color: '#6c757d'}}>
-                    At FreshlySkilled, we believe that accessibility is a shared responsibility. Together, we can create an inclusive environment that empowers all individuals to succeed. Thank you for being part of our journey towards accessibility for all.
+                    At Techtalize, we believe that accessibility is a shared responsibility. Together, we can create an inclusive environment that empowers all individuals to succeed. Thank you for being part of our journey towards accessibility for all.
                 </p>
             </div>
         </div>
@@ -116,7 +87,6 @@ const Accessibility = () => {
         {/* <!-- Back to Top --> */}
         <a href="#" className="btn btn-lg btn-primary btn-lg-square back-to-top"><i className="bi bi-arrow-up"></i></a>
         </div>
-          )}
         </>
     );
 };

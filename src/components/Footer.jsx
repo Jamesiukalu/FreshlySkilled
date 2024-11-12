@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -8,7 +7,7 @@ const Footer = () => {
         <div className="container py-5">
           <div className="row g-5">
             <div className="col-lg-3 col-md-6">
-              <h5 className="text-white mb-4">Freshlyskilled</h5>
+              <h5 className="text-white mb-4">Techtalize</h5>
               <Link className="btn btn-link text-white-50" to="/">About Us</Link>
               <Link className="btn btn-link text-white-50" to="/careers">Careers</Link>
               <Link className="btn btn-link text-white-50" to="/ourTeam">Our Programs</Link>
@@ -27,7 +26,7 @@ const Footer = () => {
               <h5 className="text-white mb-4">Contact</h5>
               <p className="mb-2"><i className="fa fa-map-marker-alt me-3"></i>123 Bell Street, Toronto, CA</p>
               <p className="mb-2"><i className="fa fa-phone-alt me-3"></i>+1 454 985 3665</p>
-              <p className="mb-2"><i className="fa fa-envelope me-3"></i>info@freshlyskilled.com</p>
+              <p className="mb-2"><i className="fa fa-envelope me-3"></i>info@Techtalize.com</p>
               <div className="d-flex pt-2">
                 <a className="btn btn-outline-light btn-social" href=""><i className="fab fa-twitter"></i></a>
                 <a className="btn btn-outline-light btn-social" href=""><i className="fab fa-facebook-f"></i></a>
@@ -37,7 +36,7 @@ const Footer = () => {
             </div>
             <div className="col-lg-3 col-md-6">
               <h5 className="text-white mb-4">Get in Touch</h5>
-              <p>Leave your email and we'll get back to you.</p>
+              <p>Leave your email and we&apos;ll get back to you.</p>
               <div className="position-relative mx-auto" style={{ maxWidth: '400px' }}>
                 <input className="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email" />
                 <button type="button" className="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Submit</button>
@@ -49,7 +48,7 @@ const Footer = () => {
           <div className="copyright">
             <div className="row">
               <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                &copy; <Link className="border-bottom" to="/">Freshlyskilled</Link>, All Right Reserved.
+                &copy; <Link className="border-bottom" to="/">Techtalize</Link>, All Right Reserved.
               </div>
               <div className="col-md-6 text-center text-md-end">
                 <div className="footer-menu">

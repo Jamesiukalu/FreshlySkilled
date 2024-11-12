@@ -1,20 +1,13 @@
-import React, { useState , useEffect } from 'react';
-import logo from "../assets/img/logo.png";
+import { useState , useEffect } from 'react';
 import { BounceLoader } from 'react-spinners';
 import WOW from 'wow.js';
 import $ from 'jquery';
 import Hero from '../components/Hero';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import Testimonial from '../components/Testimonial';
-import Jobs from '../components/Jobs';
-import ITJobSearch from '../components/ITJobSearch';
-import About from '../components/ITJobSearch';
-import Category from '../components/Category';
-import { Link } from "react-router-dom";
 
 const Inclusion = () => {
-    const [loading, setLoading] = useState(true);    const [category, setCategory] = useState('');      
+    const [loading, setLoading] = useState(true);    
     const breadcrumbs = [
       { name: 'Home', link: '/' },
       { name: 'About' },
@@ -62,7 +55,7 @@ const Inclusion = () => {
               id="spinner"
               className="spinner-container show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
             >
-              <BounceLoader color="#36D7B7" loading={loading} size={150} role="status" />
+              <BounceLoader color="#007AFF" loading={loading} size={150} role="status" />
             </div>
           ) : (
             <div className="container-xxl bg-white p-0">
@@ -75,7 +68,7 @@ const Inclusion = () => {
             <div className="container text-center">
                 <h2 className="mb-5 wow fadeInUp" data-wow-delay="0.1s">Equity, Diversity & Inclusion</h2>
                 <p className="lead wow fadeInUp" data-wow-delay="0.3s" style={{color: '#6c757d'}}>
-                    At FreshlySkilled, we believe that equity, diversity, and inclusion are fundamental to our success and the success of our global community. We are committed to creating a welcoming environment where every individual feels valued, respected, and empowered to contribute their unique perspectives and talents.
+                    At Techtalize, we believe that equity, diversity, and inclusion are fundamental to our success and the success of our global community. We are committed to creating a welcoming environment where every individual feels valued, respected, and empowered to contribute their unique perspectives and talents.
                 </p>
                 <h3 className="mt-4 mb-3 wow fadeInUp" data-wow-delay="0.5s" style={{color: '#343a40'}}>Our Commitment to EDI</h3>
                 <p className="mb-4 wow fadeInUp" data-wow-delay="0.7s" style={{color: '#6c757d'}}>
@@ -95,7 +88,7 @@ const Inclusion = () => {
                 </ul>
                 <h3 className="mt-4 mb-3 wow fadeInUp" data-wow-delay="1.7s" style={{color: '#343a40'}}>Join Us in Our Journey</h3>
                 <p className="mb-4 wow fadeInUp" data-wow-delay="1.9s" style={{color: '#6c757d'}}>
-                    We invite everyone to join us in fostering an equitable, diverse, and inclusive environment at FreshlySkilled. Together, we can create a space where all individuals can thrive and contribute to a more innovative and equitable future.
+                    We invite everyone to join us in fostering an equitable, diverse, and inclusive environment at Techtalize. Together, we can create a space where all individuals can thrive and contribute to a more innovative and equitable future.
                 </p>
             </div>
         </div>

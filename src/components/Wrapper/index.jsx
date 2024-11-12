@@ -1,5 +1,4 @@
-import React from "react"; 
-
+/* eslint-disable react/prop-types */
 export default function Wrapper(props) {
   const containerStyle = {
     display: "flex",
