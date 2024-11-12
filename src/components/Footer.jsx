@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import logo from '../assets/img/Tech brand4.png'
 
 const Footer = () => {
   return (
@@ -7,7 +8,13 @@ const Footer = () => {
         <div className="container py-5">
           <div className="row g-5">
             <div className="col-lg-3 col-md-6">
-              <h5 className="text-white mb-4">Techtalize</h5>
+              {/* <h5 className="text-white mb-4">Techtalize</h5> */}
+              <img 
+                src={logo} 
+                alt="Techtalize Logo" 
+                className="img-fluid" 
+                style={{ maxHeight: '40px' }} 
+            />
               <Link className="btn btn-link text-white-50" to="/">About Us</Link>
               <Link className="btn btn-link text-white-50" to="/careers">Careers</Link>
               <Link className="btn btn-link text-white-50" to="/ourTeam">Our Programs</Link>
