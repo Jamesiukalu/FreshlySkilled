@@ -1,20 +1,13 @@
-import React, { useState , useEffect } from 'react';
-import logo from "../assets/img/logo.png";
+import { useState , useEffect } from 'react';
 import { BounceLoader } from 'react-spinners';
 import WOW from 'wow.js';
 import $ from 'jquery';
 import Hero from '../components/Hero';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import Testimonial from '../components/Testimonial';
-import Jobs from '../components/Jobs';
-import ITJobSearch from '../components/ITJobSearch';
-import About from '../components/ITJobSearch';
-import Category from '../components/Category';
-import { Link } from "react-router-dom";
 
 const Contact = () => {
-    const [loading, setLoading] = useState(true);    const [category, setCategory] = useState('');      
+    const [loading, setLoading] = useState(true);     
     // const breadcrumbs = [
     //   { name: 'Home', link: '/' },
     //   { name: '' },
@@ -62,7 +55,7 @@ const Contact = () => {
               id="spinner"
               className="spinner-container show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
             >
-              <BounceLoader color="#36D7B7" loading={loading} size={150} role="status" />
+              <BounceLoader color="#007AFF" loading={loading} size={150} role="status" />
             </div>
           ) : (
             <div className="container-xxl bg-white p-0">
@@ -89,7 +82,7 @@ const Contact = () => {
                                     <div className="bg-white border rounded d-flex flex-shrink-0 align-items-center justify-content-center me-3" style={{width: '45px', height: '45px'}}>
                                         <i className="fa fa-envelope-open text-primary"></i>
                                     </div>
-                                    <span>support@freshlyskilled.com</span>
+                                    <span>support@Techtalize.com</span>
                                 </div>
                             </div>
                             <div className="col-md-4 wow fadeIn" data-wow-delay="0.5s">
@@ -105,8 +98,8 @@ const Contact = () => {
                     <div className="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <iframe className="position-relative rounded w-100 h-100"
                             src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=toronto%20canada+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                            frameborder="0" style={{minHeight: '400px', border:'0'}} allowfullscreen="" aria-hidden="false"
-                            tabindex="0"></iframe>
+                            frameBorder="0" style={{minHeight: '400px', border:'0'}} allowfullscreen="" aria-hidden="false"
+                            tabIndex="0"></iframe>
                     </div>
                     <div className="col-md-6">
                         <div className="wow fadeInUp" data-wow-delay="0.5s">
@@ -116,25 +109,25 @@ const Contact = () => {
                                     <div className="col-md-6">
                                         <div className="form-floating">
                                             <input type="text" className="form-control" id="name" placeholder="Your Name" />
-                                            <label for="name">Your Name</label>
+                                            <label htmlFor="name">Your Name</label>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
                                         <div className="form-floating">
                                             <input type="email" className="form-control" id="email" placeholder="Your Email" />
-                                            <label for="email">Your Email</label>
+                                            <label htmlFor="email">Your Email</label>
                                         </div>
                                     </div>
                                     <div className="col-12">
                                         <div className="form-floating">
                                             <input type="text" className="form-control" id="subject" placeholder="Subject" />
-                                            <label for="subject">Subject</label>
+                                            <label htmlFor="subject">Subject</label>
                                         </div>
                                     </div>
                                     <div className="col-12">
                                         <div className="form-floating">
                                             <textarea className="form-control" placeholder="Leave a message here" id="message" style={{height: '150px'}}></textarea>
-                                            <label for="message">Message</label>
+                                            <label htmlFor="message">Message</label>
                                         </div>
                                     </div>
                                     <div className="col-12">

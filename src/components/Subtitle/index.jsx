@@ -1,5 +1,4 @@
-import React from "react"; 
-
+/* eslint-disable react/prop-types */
 export default function Subtitle(props) {
   const containerStyle = {
     margin: "24px auto 0",  

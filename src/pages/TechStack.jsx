@@ -1,20 +1,14 @@
-import React, { useState , useEffect } from 'react';
-import logo from "../assets/img/logo.png";
+/* eslint-disable react/no-unknown-property */
+import { useState , useEffect } from 'react';
 import { BounceLoader } from 'react-spinners';
 import WOW from 'wow.js';
 import $ from 'jquery';
 import Hero from '../components/Hero';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import Testimonial from '../components/Testimonial';
-import Jobs from '../components/Jobs';
-import ITJobSearch from '../components/ITJobSearch';
-import About from '../components/ITJobSearch';
-import Category from '../components/Category';
-import { Link } from "react-router-dom";
 
 const TechStack = () => {
-    const [loading, setLoading] = useState(true);    const [category, setCategory] = useState('');      
+    const [loading, setLoading] = useState(true);
     const breadcrumbs = [
       { name: 'About', link: '/careers' },
       { name: 'Careers' },
@@ -62,7 +56,7 @@ const TechStack = () => {
               id="spinner"
               className="spinner-container show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
             >
-              <BounceLoader color="#36D7B7" loading={loading} size={150} role="status" />
+              <BounceLoader color="#007AFF" loading={loading} size={150} role="status" />
             </div>
           ) : (
             <div className="container-xxl bg-white p-0">
@@ -75,7 +69,7 @@ const TechStack = () => {
             <div className="container">
                 <h3 className="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Our Tech Stack</h3>
                 <p className="text-center wow fadeInUp" data-wow-delay="0.2s">
-                    Our team at FreshlySkilled brings together diverse expertise and backgrounds, so our tech stack is a blend of widely-used technologies with an openness to newer, innovative tools. While the specific requirements of a SaaS application can vary, here’s a look at the core technologies we employ—and some we may explore in the future.
+                    Our team at Techtalize brings together diverse expertise and backgrounds, so our tech stack is a blend of widely-used technologies with an openness to newer, innovative tools. While the specific requirements of a SaaS application can vary, here’s a look at the core technologies we employ—and some we may explore in the future.
                 </p>
 
 
@@ -112,7 +106,7 @@ const TechStack = () => {
       
                     <div className="tab-pane fade show active" id="pills-frontend" role="tabpanel" aria-labelledby="pills-frontend-tab">
                         <h4 className="text-center mb-4">Frontend Technologies</h4>
-                        <p>At FreshlySkilled, user experience is a top priority in building SaaS applications. Our frontend stack is selected to ensure intuitive interfaces and smooth interactions:</p>
+                        <p>At Techtalize, user experience is a top priority in building SaaS applications. Our frontend stack is selected to ensure intuitive interfaces and smooth interactions:</p>
                         <ul className="list-unstyled">
                             <li><strong>Core Languages:</strong> HTML, CSS, JavaScript for building user-facing components.</li>
                             <li><strong>Framework:</strong> React for dynamic and interactive user interfaces.</li>
@@ -152,7 +146,7 @@ const TechStack = () => {
                             <li><strong>Communication:</strong> Discord for team collaboration, with plans to open community channels.</li>
                             <li><strong>Project Management:</strong> GitHub is used for issue tracking and project planning.</li>
                         </ul>
-                        <p>If you have experience with other technologies, we'd love to hear from you! We’re always open to new ideas and evolving our stack to best meet project needs.</p>
+                        <p>If you have experience with other technologies, we&apos;d love to hear from you! We’re always open to new ideas and evolving our stack to best meet project needs.</p>
                     </div>
                 </div>
             </div>

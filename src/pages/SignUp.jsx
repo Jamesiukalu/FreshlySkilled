@@ -1,5 +1,4 @@
-import React, { useState , useEffect } from 'react';
-import logo from "../assets/img/logo.png";
+import { useState , useEffect } from 'react';
 import image from "../assets/img/login.jpg";
 import { BounceLoader } from 'react-spinners';
 import WOW from 'wow.js';
@@ -7,15 +6,9 @@ import $ from 'jquery';
 import Hero from '../components/Hero';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import Testimonial from '../components/Testimonial';
-import Jobs from '../components/Jobs';
-import ITJobSearch from '../components/ITJobSearch';
-import About from '../components/ITJobSearch';
-import Category from '../components/Category';
-import { Link } from "react-router-dom";
 
 const SignUp = () => {
-    const [loading, setLoading] = useState(true);    const [category, setCategory] = useState('');      
+    const [loading, setLoading] = useState(true);  
     // const breadcrumbs = [
     //   { name: 'Home', link: '/' },
     //   { name: 'About' },
@@ -75,14 +68,14 @@ const SignUp = () => {
               id="spinner"
               className="spinner-container show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
             >
-              <BounceLoader color="#36D7B7" loading={loading} size={150} role="status" />
+              <BounceLoader color="#007AFF" loading={loading} size={150} role="status" />
             </div>
           ) : (
             <div className="container-xxl bg-white p-0">
          
 
           <Navbar />
-          <Hero  title="Get Started with FreshlySkilled"/>
+          <Hero  title="Get Started with Techtalize"/>
           {/* <Hero title="our Team" breadcrumbs={breadcrumbs} /> */}
           <div className="container-xxl py-4 wow fadeInUp" data-wow-delay="0.1s">
         <div className="container">
@@ -93,7 +86,7 @@ const SignUp = () => {
             <div className="col-lg-6">
               {!showTalentForm && !showPartnerForm ? (
                 <div id="image-form" className="bg-light rounded p-4">
-                  <h6 className="mb-4">Select the type of account you'd like to create:</h6>
+                  <h6 className="mb-4">Select the type of account you&apos;d like to create:</h6>
                   <div className="d-flex justify-content-around mb-4">
                     <button className="btn btn-primary" onClick={handleTalentClick}>Join as a Talent</button>
                     <button className="btn btn-secondary" onClick={handlePartnerClick}>Join as a Partner/Company</button>

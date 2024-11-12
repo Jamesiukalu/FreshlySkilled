@@ -1,20 +1,14 @@
-import React, { useState , useEffect } from 'react';
-import logo from "../assets/img/logo.png";
+import { useState , useEffect } from 'react';
 import { BounceLoader } from 'react-spinners';
 import WOW from 'wow.js';
 import $ from 'jquery';
 import Hero from '../components/Hero';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import Testimonial from '../components/Testimonial';
-import Jobs from '../components/Jobs';
-import ITJobSearch from '../components/ITJobSearch';
-import About from '../components/ITJobSearch';
-import Category from '../components/Category';
 import { Link } from "react-router-dom";
 
 const Faq = () => {
-    const [loading, setLoading] = useState(true);    const [category, setCategory] = useState('');      
+    const [loading, setLoading] = useState(true);     
     // const breadcrumbs = [
     //   { name: 'Home', link: '/' },
     //   { name: '' },
@@ -62,7 +56,7 @@ const Faq = () => {
               id="spinner"
               className="spinner-container show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
             >
-              <BounceLoader color="#36D7B7" loading={loading} size={150} role="status" />
+              <BounceLoader color="#007AFF" loading={loading} size={150} role="status" />
             </div>
           ) : (
             <div className="container-xxl bg-white p-0">
@@ -74,23 +68,23 @@ const Faq = () => {
             <div className="container">
                 <h3 className="mb-4">General</h3>
                 <div className="mb-3">
-                    <strong>1. What is FreshlySkilled?</strong>
-                    <p>FreshlySkilled is a dynamic platform that connects emerging talent with real-world projects, providing hands-on experience in a collaborative environment.</p>
+                    <strong>1. What is Techtalize?</strong>
+                    <p>Techtalize is a dynamic platform that connects emerging talent with real-world projects, providing hands-on experience in a collaborative environment.</p>
                 </div>
                 <div className="mb-3">
-                    <strong>2. How does FreshlySkilled differ from traditional bootcamps?</strong>
-                    <p>Unlike traditional bootcamps that focus on theoretical learning, FreshlySkilled emphasizes practical, project-based experience, allowing participants to apply their skills in real-world scenarios while working with industry professionals.</p>
+                    <strong>2. How does Techtalize differ from traditional bootcamps?</strong>
+                    <p>Unlike traditional bootcamps that focus on theoretical learning, Techtalize emphasizes practical, project-based experience, allowing participants to apply their skills in real-world scenarios while working with industry professionals.</p>
                 </div>
                 <div className="mb-3">
-                    <strong>3. Can I include my experience with FreshlySkilled on my resume?</strong>
-                    <p>Absolutely! The experience you gain at FreshlySkilled is valuable and can enhance your resume, showcasing your practical skills to potential employers.</p>
+                    <strong>3. Can I include my experience with Techtalize on my resume?</strong>
+                    <p>Absolutely! The experience you gain at Techtalize is valuable and can enhance your resume, showcasing your practical skills to potential employers.</p>
                 </div>
                 <div className="mb-3">
-                    <strong>4. What is the onboarding process like at FreshlySkilled?</strong>
-                    <p>Our onboarding process is designed to be smooth and comprehensive, ensuring you are equipped with the necessary tools and knowledge to succeed. You'll receive guidance from our team and access to resources to help you get started.</p>
+                    <strong>4. What is the onboarding process like at Techtalize?</strong>
+                    <p>Our onboarding process is designed to be smooth and comprehensive, ensuring you are equipped with the necessary tools and knowledge to succeed. You&apos;ll receive guidance from our team and access to resources to help you get started.</p>
                 </div>
                 <div className="mb-3">
-                    <strong>5. Do I need prior experience to be accepted into FreshlySkilled?</strong>
+                    <strong>5. Do I need prior experience to be accepted into Techtalize?</strong>
                     <p>No prior experience is necessary! We welcome individuals from various backgrounds and skill levels who are eager to learn and grow.</p>
                 </div>
                 <div className="mb-3">
@@ -112,20 +106,20 @@ const Faq = () => {
 
                 <h3 className="mb-4">Your Work and Responsibilities</h3>
                 <div className="mb-3">
-                    <strong>1. What does a typical day at FreshlySkilled look like?</strong>
+                    <strong>1. What does a typical day at Techtalize look like?</strong>
                     <p>A typical day involves collaborative work on projects, meetings with team members, and engaging in hands-on tasks that enhance your skills.</p>
                 </div>
                 <div className="mb-3">
-                    <strong>2. What is expected of me during my time with FreshlySkilled?</strong>
+                    <strong>2. What is expected of me during my time with Techtalize?</strong>
                     <p>We expect commitment, active participation, and a willingness to learn and collaborate with your peers.</p>
                 </div>
                 <div className="mb-3">
                     <strong>3. Is this a remote work opportunity?</strong>
-                    <p>Yes, FreshlySkilled offers flexible remote work options to accommodate different lifestyles and preferences.</p>
+                    <p>Yes, Techtalize offers flexible remote work options to accommodate different lifestyles and preferences.</p>
                 </div>
                 <div className="mb-3">
                     <strong>4. Will I receive a reference letter upon completion?</strong>
-                    <p>Yes, participants will receive a reference letter detailing their contributions and skills developed during their time with FreshlySkilled.</p>
+                    <p>Yes, participants will receive a reference letter detailing their contributions and skills developed during their time with Techtalize.</p>
                 </div>
 
                 <h3 className="mb-4">Technology</h3>

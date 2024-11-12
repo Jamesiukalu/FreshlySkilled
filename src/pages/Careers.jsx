@@ -1,16 +1,10 @@
-import React, { useState , useEffect } from 'react';
-import logo from "../assets/img/logo.png";
+import { useState , useEffect } from 'react';
 import { BounceLoader } from 'react-spinners';
 import WOW from 'wow.js';
 import $ from 'jquery';
 import Hero from '../components/Hero';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import Testimonial from '../components/Testimonial';
-import Jobs from '../components/Jobs';
-import ITJobSearch from '../components/ITJobSearch';
-import About from '../components/ITJobSearch';
-import Category from '../components/Category';
 import { Link } from "react-router-dom";
 
 import image1 from '../assets/img/remote3.jpg';
@@ -18,8 +12,8 @@ import image2 from '../assets/img/about-4.jpg';
 import image3 from '../assets/img/about-2.jpg';
 import image4 from '../assets/img/remote2.jpg';
 
-const Careers = () => {
-    const [loading, setLoading] = useState(true);    const [category, setCategory] = useState('');      
+const Careers = () => {  
+  const [loading, setLoading] = useState(true);  
     const breadcrumbs = [
       { name: 'Home', link: '/' },
       { name: 'About Us' },
@@ -67,20 +61,20 @@ const Careers = () => {
               id="spinner"
               className="spinner-container show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
             >
-              <BounceLoader color="#36D7B7" loading={loading} size={150} role="status" />
+              <BounceLoader color="#007AFF" loading={loading} size={150} role="status" />
             </div>
           ) : (
             <div className="container-xxl bg-white p-0">
          
 
           <Navbar />
-          <Hero  title="Page Name" breadcrumbs={breadcrumbs}/>
+          <Hero  title="Careers" breadcrumbs={breadcrumbs}/>
         <div className="container-xxl py-5">
             <div className="container">
                 <div className="row g-5 align-items-center">
                     <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                         <h1 className="mb-4">Empowering Talent Through Hands-On Experience!</h1>
-                        <p className="mb-4">At FreshlySkilled, we harness the power of global collaboration to empower aspiring professionals. Our goal is to provide a platform where talents can gain international experience through project-based internships, transforming their skills and perspectives for a competitive edge in the global marketplace.</p>
+                        <p className="mb-4">At Techtalize, we harness the power of global collaboration to empower aspiring professionals. Our goal is to provide a platform where talents can gain international experience through project-based internships, transforming their skills and perspectives for a competitive edge in the global marketplace.</p>
                         <Link className="btn btn-primary py-3 px-5 mt-3" to="/job-list">Join Us</Link>
                     </div>
                     <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
