@@ -58,13 +58,13 @@ const JobCategories = () => {
               <BounceLoader color="#007AFF" loading={loading} size={150} role="status" />
             </div>
           ) : (
-            <div className="container-xxl bg-white p-0">
+            <div className="container-fluid bg-white p-0">
          
 
           <Navbar />
           <Hero  title="Our Programs"/>
           {/* <Hero title="Equity, Diversity & Inclusion" breadcrumbs={breadcrumbs} /> */}
-          <div className="container-xxl py-5">
+          <div className="container-fluid py-5">
             <div className="container">
                 <h1 className="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Explore By Category</h1>
                 <div className="row g-4">

@@ -58,13 +58,13 @@ const OurTeam = () => {
               <BounceLoader color="#007AFF" loading={loading} size={150} role="status" />
             </div>
           ) : (
-            <div className="container-xxl bg-white p-0">
+            <div className="container-fluid bg-white p-0">
          
 
           <Navbar />
           {/* <Hero  title="Frequently Asked Questions (FAQ)"/> */}
           <Hero title="our Team" breadcrumbs={breadcrumbs} />
-          <div className="container-xxl py-5">
+          <div className="container-fluid py-5">
             <div className="container">
                 <div className="text-center mb-5">
                     <h1 className="mb-4">Meet Our Dedicated Team</h1>

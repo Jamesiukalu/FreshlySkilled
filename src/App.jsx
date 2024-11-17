@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, {useState} from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import HomePage from './pages/HomePage';
 import OurTeam from './pages/OurTeam';
 import Careers from './pages/Careers';
@@ -18,8 +18,12 @@ import SignUp from './pages/SignUp';
 import Products from './pages/Products';
 import Contact from './pages/Contact';
 import ErrorPage from './pages/404';
+import Login from './pages/EmployeeLogin';
+import Dashboard from './pages/Dashboard';
 
 function App() {
+  const [employee, setEmployee] = useState(null);
+
   return (      
     <BrowserRouter>
       <Routes>
@@ -40,7 +44,13 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/products" element={<Products />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<ErrorPage />} /> 
+        <Route path="/login" element={<Login onLogin={setEmployee} />} />
+        <Route
+          path="/dashboard"
+          element={
+            employee ? <Dashboard employee={employee} /> : <Navigate to="/login" />
+          }
+        />
       </Routes>
     </BrowserRouter>
   );

@@ -59,7 +59,7 @@ const TestimonialPage = () => {
               <BounceLoader color="#007AFF" loading={loading} size={150} role="status" />
             </div>
           ) : (
-            <div className="container-xxl bg-white p-0">        
+            <div className="container-fluid bg-white p-0">        
 
           <Navbar />
           {/* <Hero  title="Role Details"/> */}

@@ -1,7 +1,10 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import logo from '../assets/img/Tech brand5.png'
 
 const Navbar = () => {
+  const location = useLocation();
+  const excludedPaths = ['/login', '/signup'];
+  const showGetStarted = !excludedPaths.includes(location.pathname);
     return (
         <nav className="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
             <NavLink to="/" className="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
@@ -43,9 +46,11 @@ const Navbar = () => {
                     </div>
                     <NavLink to="/contact" className={({ isActive }) => isActive ? "nav-item nav-link active" : "nav-item nav-link"}>Contact</NavLink>
                 </div>
-                <NavLink to="/signup" className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">
-                    Create Account<i className="fa fa-arrow-right ms-3"></i>
-                </NavLink>
+                {showGetStarted && (
+                    <NavLink to="/signup" className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">
+                    Get Started<i className="fa fa-arrow-right ms-3"></i>
+                    </NavLink>
+                )}
             </div>
         </nav>
     );
