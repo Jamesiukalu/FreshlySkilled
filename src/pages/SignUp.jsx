@@ -6,14 +6,10 @@ import $ from 'jquery';
 import Hero from '../components/Hero';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
     const [loading, setLoading] = useState(true);  
-    // const breadcrumbs = [
-    //   { name: 'Home', link: '/' },
-    //   { name: 'About' },
-    //   { name: 'our Team', active: true },
-    // ];
     const [showTalentForm, setShowTalentForm] = useState(false);
     const [showPartnerForm, setShowPartnerForm] = useState(false);
   
@@ -71,77 +67,100 @@ const SignUp = () => {
               <BounceLoader color="#007AFF" loading={loading} size={150} role="status" />
             </div>
           ) : (
-            <div className="container-xxl bg-white p-0">
+            <div className="container-fluid bg-white p-0">
          
 
           <Navbar />
           <Hero  title="Get Started with Techtalize"/>
-          {/* <Hero title="our Team" breadcrumbs={breadcrumbs} /> */}
-          <div className="container-xxl py-4 wow fadeInUp" data-wow-delay="0.1s">
+          <div className="container-fluid py-4 wow fadeInUp" data-wow-delay="0.1s">
         <div className="container">
-          <div className="row">
-            <div className="col-lg-6">
-              <img src={image} alt="" className="img-fluid mx-auto d-block" style={{ width: '100%' }} />
-            </div>
+          <div className="row mb-4">
+              <div className="col text-center">
+                  <Link to="/login">
+                      <button className="btn btn-secondary">Already onboarded? Sign In</button>
+                  </Link>
+              </div>
+          </div>
+        <div className="row justify-content-center">
+        <div className="col-xl-10">
+        <div className="card border-0">
+        <div className="card-body p-0">
+          <div className="row no-gutters">
             <div className="col-lg-6">
               {!showTalentForm && !showPartnerForm ? (
                 <div id="image-form" className="bg-light rounded p-4">
                   <h6 className="mb-4">Select the type of account you&apos;d like to create:</h6>
                   <div className="d-flex justify-content-around mb-4">
                     <button className="btn btn-primary" onClick={handleTalentClick}>Join as a Talent</button>
-                    <button className="btn btn-secondary" onClick={handlePartnerClick}>Join as a Partner/Company</button>
+                    <button className="btn btn-outline-primary" onClick={handlePartnerClick}>Join as a Partner/Company</button>
                   </div>
                 </div>
               ) : showTalentForm ? (
-                <div id="dynamic-form" className="bg-light rounded p-4">
+                <div id="dynamic-form" className="p-4">
                   <h3 className="mb-4">Create a Talent Account</h3>
                   <form>
-                    <div className="mb-3">
+                    <div className="form-group mb-3">
                       <label htmlFor="first-name" className="form-label">First Name</label>
                       <input type="text" className="form-control" id="first-name" required />
                     </div>
-                    <div className="mb-3">
+                    <div className="form-group mb-3">
                       <label htmlFor="last-name" className="form-label">Last Name</label>
                       <input type="text" className="form-control" id="last-name" required />
                     </div>
-                    <div className="mb-3">
+                    <div className="form-group mb-3">
                       <label htmlFor="phone" className="form-label">Phone Number</label>
                       <input type="tel" className="form-control" id="phone" required />
                     </div>
-                    <div className="mb-3">
+                    <div className="form-group mb-3">
                       <label htmlFor="email" className="form-label">Email Address</label>
                       <input type="email" className="form-control" id="email" required />
                     </div>
-                    <div className="mb-3">
+                    <div className="form-group mb-3">
                       <label htmlFor="role" className="form-label">Best Fit Role</label>
                       <input type="text" className="form-control" id="role" placeholder="e.g., Front-End Developer" required />
                     </div>
-                    <button type="submit" className="btn btn-success">Sign Up</button>
+                    <div className="form-group mb-3">
+                      <label htmlFor="file" className="form-label">Upload Resume</label>
+                      <input type="file" className="form-control" id="file" required />
+                    </div>
+                    <button type="submit" className="btn btn-primary">Sign Up</button>
                   </form>
                 </div>
               ) : (
-                <div id="partner-form" className="bg-light rounded p-4">
+                <div id="partner-form" className="p-4">
                   <h3 className="mb-4">Create a Partner/Company Account</h3>
                   <form>
-                    <div className="mb-3">
+                    <div className="form-group mb-3">
                       <label htmlFor="business-name" className="form-label">Company/Business Name</label>
                       <input type="text" className="form-control" id="business-name" required />
                     </div>
-                    <div className="mb-3">
-                      <label htmlFor="contact-info" className="form-label">Phone Number or Email</label>
-                      <input type="text" className="form-control" id="contact-info" required />
+                    <div className="form-group mb-3">
+                      <label htmlFor="contact-info" className="form-label">Email Address</label>
+                      <input type="email" className="form-control" id="contact-info" required />
                     </div>
-                    <div className="mb-3">
+                    <div className="form-group mb-3">
                       <label htmlFor="project-type" className="form-label">Project Type</label>
                       <input type="text" className="form-control" id="project-type" placeholder="e.g., Web Development" required />
                     </div>
-                    <button type="submit" className="btn btn-success">Request Quote</button>
+                    <div className="form-group mb-3">
+                      <label htmlFor="project-desc" className="form-label">Project Description</label>
+                      <textarea className="form-control" id="project-desc" placeholder="project Description" required ></textarea>
+                    </div>
+                    <button type="submit" className="btn btn-primary">Request Quote</button>
                   </form>
                 </div>
               )}
             </div>
+            
+            <div className="col-lg-6 d-none d-lg-inline-block">
+              <img src={image} alt="" className="img-fluid mx-auto d-block" style={{ width: '100%' }} />
+            </div>
           </div>
         </div>
+      </div>
+      </div>
+      </div>
+      </div>
       </div>
 
         <Footer />
