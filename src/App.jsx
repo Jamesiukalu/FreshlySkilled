@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import HomePage from './pages/HomePage';
 import OurTeam from './pages/OurTeam';
@@ -34,7 +34,7 @@ function App() {
         <Route path="/strategy" element={<Strategy />} />
         <Route path="/inclusion" element={<Inclusion />} />
         <Route path="/accessibility" element={<Accessibility />} />
-        <Route path="/job-detail" element={<JobDetail />} />
+        <Route path="/job-detail/:id" element={<JobDetail />} />
         <Route path="/job-list" element={<JobList />} />
         <Route path="/job-categories" element={<JobCategories />} />
         <Route path="/tech-stack" element={<TechStack />} />
@@ -51,6 +51,7 @@ function App() {
             employee ? <Dashboard employee={employee} /> : <Navigate to="/login" />
           }
         />
+        <Route path="*" element={<ErrorPage />} /> 
       </Routes>
     </BrowserRouter>
   );
