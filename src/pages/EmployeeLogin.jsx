@@ -79,7 +79,7 @@ const Login = ({ onLogin }) => {
                                     <button type="submit" className="btn btn-primary">
                                       Login
                                     </button>
-                                    <a href="#l" className="float-end text-muted">Forgot password?</a>
+                                    <a href="#l" className="float-end text-primary">Forgot password?</a>
                                 </form>
                             </div>
                         </div>
