@@ -1,6 +1,16 @@
-import React from "react";
-import { Container, Navbar, FormControl, NavDropdown, Row, Col, Nav, Tab, Card, ListGroup, Image, Form, Button, OverlayTrigger, Tooltip } from "react-bootstrap";
-
+import React, { useState } from "react";
+import {
+  Container,
+  Navbar,
+  NavDropdown,
+  Row,
+  Col,
+  Nav,
+  Card,
+  Button,
+  OverlayTrigger,
+  Tooltip,
+} from "react-bootstrap";
 import mainlogo from '../assets/img/Tech brand4.png'
 import EmployeeInfo from "../components/Dashboard/EmployeeInfo";
 import TaskList from "../components/Dashboard/TaskList";
@@ -10,6 +20,20 @@ import EmployeeDocuments from "../components/Dashboard/EmployeeDocuments";
 
 
 const Dashboard = ({ employee }) => {
+  const [isEditing, setIsEditing] = useState(false);
+  const [profileData, setProfileData] = useState(employee);
+
+  const handleEditClick = () => {
+    setIsEditing(true);
+  };
+
+  const handleSave = (updatedProfile) => {
+    setProfileData(updatedProfile);
+    setIsEditing(false);
+    console.log("Updated Profile Data:", updatedProfile);
+    // Add backend logic here to persist changes
+  };
+
   return (
     <>
      <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
@@ -48,7 +72,7 @@ const Dashboard = ({ employee }) => {
                     placement="top"
                     overlay={<Tooltip id="edit-profile-tooltip">Edit Profile</Tooltip>}
                   >
-                    <Button variant="link" size="sm">
+                    <Button variant="link" size="sm" onClick={handleEditClick}>
                       <i className="fas fa-user-edit text-secondary text-sm"></i>
                     </Button>
                   </OverlayTrigger>
@@ -63,7 +87,12 @@ const Dashboard = ({ employee }) => {
                       <h6 className="mb-0">Profile Details</h6>
                     </Card.Header>
                     <Card.Body className="p-3">
-                    <EmployeeInfo employee={employee} />
+                    {/* <EmployeeInfo employee={employee} /> */}
+                    <EmployeeInfo
+                      employee={profileData}
+                      isEditing={isEditing}
+                      onSave={handleSave}
+                    />
                     </Card.Body>
                   </Card>
                 </Col>
