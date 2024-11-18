@@ -11,7 +11,7 @@ const Hero = ({ title, breadcrumbs }) => {
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb text-uppercase">
               {breadcrumbs.map((breadcrumb, index) => (
-                <li key={index} className={`breadcrumb-item ${breadcrumb.active ? 'text-white active' : ''}`}>
+                <li key={index} className={`breadcrumb-item ${breadcrumb.active ? 'text-white active' : index === 1 ? 'text-secondary' : ''}`}>
                   {breadcrumb.link ? (
                     <NavLink to={breadcrumb.link}>{breadcrumb.name}</NavLink>
                   ) : (

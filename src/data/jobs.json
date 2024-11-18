@@ -1,84 +1,119 @@
 [
-    {
-    "id": 1,
-      "title": "Marketing Manager",
-      "location": "Onsite",
-      "type": "Full Time",
-      "salary": "Voluntary",
-      "roleDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "roleResponsibility": "Magna et elitr diam sed lorem. Diam diam stet erat no est est. Accusam sed lorem stet voluptua sit sit at stet consetetur, takimata at diam kasd gubergren elitr dolor",
-      "roleResponsibilities": [
-        "Consectetur adipiscing elit.",
-        "Curabitur blandit tempus porttitor.",
-        "Lorem ipsum dolor sit amet."
-      ],
-      "roleQualification": "Magna et elitr diam sed lorem. Diam diam stet erat no est est. Accusam sed lorem stet voluptua sit sit at stet consetetur, takimata at diam kasd gubergren elitr dolor",
-      "roleQualifications": [
-        "Experience in digital marketing.",
-        "Strong communication skills.",
-        "Ability to lead a team."
-      ],
-      "deadline": "2045-01-01",
-      "rolePublishedDate": "2044-12-01",
-      "companyDetails": {
-        "name": "Techtalize",
-        "description": "Ipsum dolor ipsum accusam stet et et diam dolores, sed rebum sadipscing elitr vero dolores. Lorem dolore elitr justo et no gubergren sadipscing, ipsum et takimata aliquyam et rebum est ipsum lorem diam. Et lorem magna eirmod est et et sanctus et, kasd clita labore."
+      {
+          "id": 1,
+          "title": "Data Scientist",
+          "location": "Remote",
+          "type": "Full Time",
+          "salary": "Voluntary",
+          "roleDescription": "Extract actionable insights from large datasets to drive data-driven decision making.",
+          "roleResponsibilities": [
+              "Build and maintain data pipelines",
+              "Conduct exploratory data analysis",
+              "Develop and deploy machine learning models",
+              "Communicate complex technical concepts to non-technical stakeholders"
+          ],
+          "roleQualification": "Strong analytical skills, proficiency in Python and statistical modeling.",
+          "roleQualifications": [
+              "Master's or PhD in a quantitative field",
+              "Experience with machine learning frameworks (e.g., TensorFlow, PyTorch)",
+              "Knowledge of cloud platforms (AWS, GCP, Azure)"
+          ],
+          "deadline": "2024-12-31",
+          "rolePublishedDate": "2024-11-17",
+          "companyDetails": {
+              "name": "Techtalize",
+              "description": "A leading technology company focused on innovation and data-driven solutions."
+          },
+          "category": "featured"
       },
-      "category": "featured"
-    },
-    {
-        "id": 2,
-      "title": "Frontend Developer",
-      "location": "Onsite",
-      "type": "Part Time",
-      "salary": "Voluntary",
-      "roleDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "roleResponsibility": "Magna et elitr diam sed lorem. Diam diam stet erat no est est. Accusam sed lorem stet voluptua sit sit at stet consetetur, takimata at diam kasd gubergren elitr dolor",
-      "roleResponsibilities": [
-        "Consectetur adipiscing elit.",
-        "Curabitur blandit tempus porttitor.",
-        "Lorem ipsum dolor sit amet."
-      ],
-      "roleQualification": "Magna et elitr diam sed lorem. Diam diam stet erat no est est. Accusam sed lorem stet voluptua sit sit at stet consetetur, takimata at diam kasd gubergren elitr dolor",
-      "roleQualifications": [
-        "Experience in digital marketing.",
-        "Strong communication skills.",
-        "Ability to lead a team."
-      ],
-      "deadline": "2045-01-01",
-      "rolePublishedDate": "2044-12-01",
-      "companyDetails": {
-        "name": "Techtalize",
-        "description": "Ipsum dolor ipsum accusam stet et et diam dolores, sed rebum sadipscing elitr vero dolores. Lorem dolore elitr justo et no gubergren sadipscing, ipsum et takimata aliquyam et rebum est ipsum lorem diam. Et lorem magna eirmod est et et sanctus et, kasd clita labore."
+      {
+          "id": 2,
+          "title": "Cybersecurity Analyst",
+          "location": "Remote",
+          "type": "Full Time",
+          "salary": "Voluntary",
+          "roleDescription": "Protect sensitive information and systems from cyber threats.",
+          "deadline": "2024-12-31",
+          "rolePublishedDate": "2024-11-17",
+          "companyDetails": {
+              "name": "Techtalize",
+              "description": "A leading technology company focused on innovation and data-driven solutions."
+          },
+          "category": "full-time"
       },
-      "category": "part-time"
-    },
-    {
-        "id": 3,
-      "title": "Backend Developer",
-      "location": "Onsite",
-      "type": "Full Time",
-      "salary": "Voluntary",
-      "roleDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "roleResponsibility": "Magna et elitr diam sed lorem. Diam diam stet erat no est est. Accusam sed lorem stet voluptua sit sit at stet consetetur, takimata at diam kasd gubergren elitr dolor",
-      "roleResponsibilities": [
-        "Consectetur adipiscing elit.",
-        "Curabitur blandit tempus porttitor.",
-        "Lorem ipsum dolor sit amet."
-      ],
-      "roleQualification": "Magna et elitr diam sed lorem. Diam diam stet erat no est est. Accusam sed lorem stet voluptua sit sit at stet consetetur, takimata at diam kasd gubergren elitr dolor",
-      "roleQualifications": [
-        "Experience in digital marketing.",
-        "Strong communication skills.",
-        "Ability to lead a team."
-      ],
-      "deadline": "2045-01-01",
-      "rolePublishedDate": "2044-12-01",
-      "companyDetails": {
-        "name": "Techtalize",
-        "description": "Ipsum dolor ipsum accusam stet et et diam dolores, sed rebum sadipscing elitr vero dolores. Lorem dolore elitr justo et no gubergren sadipscing, ipsum et takimata aliquyam et rebum est ipsum lorem diam. Et lorem magna eirmod est et et sanctus et, kasd clita labore."
+      {
+          "id": 3,
+          "title": "AI/ML Engineer",
+          "location": "Remote",
+          "type": "Full Time",
+          "salary": "Voluntary",
+          "roleDescription": "Develop and deploy AI and machine learning models.",
+          "deadline": "2024-12-31",
+          "rolePublishedDate": "2024-11-17",
+          "companyDetails": {
+              "name": "Techtalize",
+              "description": "A leading technology company focused on innovation and data-driven solutions."
+          },
+          "category": "full-time"
       },
-      "category": "full-time"
-    }
+      {
+          "id": 4,
+          "title": "Cloud Engineer",
+          "location": "Remote",
+          "type": "Full Time",
+          "salary": "Voluntary",
+          "roleDescription": "Design, implement, and manage cloud infrastructure.",
+          "deadline": "2024-12-31",
+          "rolePublishedDate": "2024-11-17",
+          "companyDetails": {
+              "name": "Techtalize",
+              "description": "A leading technology company focused on innovation and data-driven solutions."
+          },
+          "category": "part-time"
+      },
+      {
+          "id": 5,
+          "title": "Full Stack Developer",
+          "location": "Remote",
+          "type": "Full Time",
+          "salary": "Voluntary",
+          "roleDescription": "Develop both front-end and back-end web applications.",
+          "deadline": "2024-12-31",
+          "rolePublishedDate": "2024-11-17",
+          "companyDetails": {
+              "name": "Techtalize",
+              "description": "A leading technology company focused on innovation and data-driven solutions."
+          },
+          "category": "part-time"
+      },
+      {
+          "id": 6,
+          "title": "Database Administrator",
+          "location": "Remote",
+          "type": "Full Time",
+          "salary": "Voluntary",
+          "roleDescription": "Manage and maintain databases.",
+          "deadline": "2024-12-31",
+          "rolePublishedDate": "2024-11-17",
+          "companyDetails": {
+              "name": "Techtalize",
+              "description": "A leading technology company focused on innovation and data-driven solutions."
+          },
+          "category": "part-time"
+      },
+      {
+          "id": 7,
+          "title": "UI/UX Designer",
+          "location": "Remote",
+          "type": "Full Time",
+          "salary": "Voluntary",
+          "roleDescription": "Design user-friendly interfaces and experiences.",
+          "deadline": "2024-12-31",
+          "rolePublishedDate": "2024-11-17",
+          "companyDetails": {
+              "name": "Techtalize",
+              "description": "A leading technology company focused on innovation and data-driven solutions."
+          },
+          "category": "featured"
+      }
   ]
-  

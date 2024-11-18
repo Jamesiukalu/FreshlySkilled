@@ -79,12 +79,12 @@ const Inclusion = () => {
                     Embracing diversity not only enriches our community but also drives innovation and creativity. By incorporating diverse perspectives, we enhance problem-solving and foster a more dynamic environment that benefits everyone involved. We recognize that our collective success depends on the contributions of individuals from various backgrounds, experiences, and viewpoints.
                 </p>
                 <h3 className="mt-4 mb-3 wow fadeInUp" data-wow-delay="1.3s" style={{color: '#343a40'}}>Our Initiatives</h3>
-                <ul className="list-unstyled mb-4 wow fadeInUp" data-wow-delay="1.5s" style={{color: '#6c757d'}}>
-                    <li>🌍 **Inclusive Recruitment**: We actively seek diverse talent through inclusive hiring practices and outreach initiatives to underrepresented communities.</li>
-                    <li>📚 **Training and Development**: We provide ongoing education and training on topics related to diversity, equity, and inclusion to all team members, fostering an understanding of the importance of EDI in our workplace.</li>
-                    <li>🤝 **Community Engagement**: We partner with organizations and initiatives that promote diversity and inclusion, supporting community-building efforts and outreach programs.</li>
-                    <li>💬 **Feedback Mechanisms**: We encourage open dialogue and feedback from our community to continually assess and improve our EDI practices, ensuring that everyone feels heard and valued.</li>
-                    <li>🌟 **Celebrating Diversity**: We celebrate various cultural events, heritage months, and awareness days to honor the diverse backgrounds of our community members.</li>
+                <ul className="list-unstyled mb-4 wow fadeInUp" data-wow-delay="1.5s" style={{color: '#6c757d',textAlign: 'left'}}>
+                    <li>🌍 Inclusive Recruitment: We actively seek diverse talent through inclusive hiring practices and outreach initiatives to underrepresented communities.</li>
+                    <li>📚 Training and Development: We provide ongoing education and training on topics related to diversity, equity, and inclusion to all team members, fostering an understanding of the importance of EDI in our workplace.</li>
+                    <li>🤝 Community Engagement: We partner with organizations and initiatives that promote diversity and inclusion, supporting community-building efforts and outreach programs.</li>
+                    <li>💬 Feedback Mechanisms: We encourage open dialogue and feedback from our community to continually assess and improve our EDI practices, ensuring that everyone feels heard and valued.</li>
+                    <li>🌟 Celebrating Diversity: We celebrate various cultural events, heritage months, and awareness days to honor the diverse backgrounds of our community members.</li>
                 </ul>
                 <h3 className="mt-4 mb-3 wow fadeInUp" data-wow-delay="1.7s" style={{color: '#343a40'}}>Join Us in Our Journey</h3>
                 <p className="mb-4 wow fadeInUp" data-wow-delay="1.9s" style={{color: '#6c757d'}}>
