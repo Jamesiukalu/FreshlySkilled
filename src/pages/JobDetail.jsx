@@ -101,6 +101,31 @@ const JobDetail = () => {
                                     ))}
                                     </ul>
                                 </div>
+                            <div className="">
+                                <h4 className="mb-4">Fill the form to apply</h4>
+                                <form>
+                                    <div className="row g-3">
+                                        <div className="col-12 col-sm-6">
+                                            <input type="text" className="form-control" placeholder="Your Name" />
+                                        </div>
+                                        <div className="col-12 col-sm-6">
+                                            <input type="email" className="form-control" placeholder="Your Email" />
+                                        </div>
+                                        <div className="col-12 col-sm-6">
+                                            <input type="text" className="form-control" placeholder="Portfolio Website" />
+                                        </div>
+                                        <div className="col-12 col-sm-6">
+                                            <input type="file" className="form-control bg-white" />
+                                        </div>
+                                        <div className="col-12">
+                                            <textarea className="form-control" rows="5" placeholder="Coverletter"></textarea>
+                                        </div>
+                                        <div className="col-12">
+                                            <button className="btn btn-primary w-100" type="submit">Apply Now</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>        
                             </div>
                             <div className="col-lg-4">
                                 <div className="bg-light rounded p-5 mb-4 wow slideInUp" data-wow-delay="0.1s">
@@ -114,7 +139,7 @@ const JobDetail = () => {
                                 </div>
                                 <div className="bg-light rounded p-5 wow slideInUp" data-wow-delay="0.1s">
                                     <h4 className="mb-4">{job.companyDetails.name}</h4>
-                                    <p className="m-0">Ipsum dolor ipsum accusam stet et et diam dolores, sed rebum sadipscing elitr vero dolores...</p>
+                                    <p className="m-0">{job.companyDetails.description}</p>
                                 </div>
                             </div>
                         </div>
