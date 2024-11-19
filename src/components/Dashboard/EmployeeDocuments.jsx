@@ -8,7 +8,10 @@ const EmployeeDocuments = () => {
     { title: 'Company Policies', file: 'CompanyPolicies.pdf' },
     { title: 'Benefits Guide', file: 'BenefitsGuide.pdf' },
   ];
-
+  // const documents = employee?.documents || [
+  //   { title: 'Employee Handbook', file: 'EmployeeHandbook.pdf' },
+  //   { title: 'Onboarding Guide', file: 'OnboardingGuide.pdf' },
+  // ];
   const [showModal, setShowModal] = useState(false);
   const [selectedDocument, setSelectedDocument] = useState(null);
 

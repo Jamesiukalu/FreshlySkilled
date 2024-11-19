@@ -3,6 +3,8 @@ import { Card, ListGroup, ListGroupItem, Form, Button } from 'react-bootstrap';
 
 const EmployeeInfo = ({ employee, isEditing, onSave }) => {
   const [formData, setFormData] = useState(employee);
+  const formattedDOE = new Date(employee.dateOfEmployment).toLocaleDateString();
+
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -14,6 +16,7 @@ const EmployeeInfo = ({ employee, isEditing, onSave }) => {
 
   const handleSaveClick = () => {
     onSave(formData);
+    setIsEditing(false);
   };
     return (
       <Card>
@@ -78,8 +81,8 @@ const EmployeeInfo = ({ employee, isEditing, onSave }) => {
           <ListGroup className="list-group-flush">
             <ListGroupItem>Email: {employee.email}</ListGroupItem>
             <ListGroupItem>Phone: {employee.phone}</ListGroupItem>
-            <ListGroupItem>Role: Backend Developer</ListGroupItem>
-            <ListGroupItem>DOE: 12th December 2024</ListGroupItem>
+            <ListGroupItem>Role: {employee.role}</ListGroupItem>
+            <ListGroupItem>DOE: {formattedDOE}</ListGroupItem>
             <ListGroupItem>Location: {employee.location.city}, {employee.location.state}</ListGroupItem> 
           </ListGroup>
           </>
