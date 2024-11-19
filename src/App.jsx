@@ -48,7 +48,7 @@ function App() {
         <Route
           path="/dashboard"
           element={
-            employee ? <Dashboard employee={employee} /> : <Navigate to="/login" />
+            localStorage.getItem('user') ? <Dashboard /> : <Navigate to="/login" />
           }
         />
         <Route path="*" element={<ErrorPage />} /> 

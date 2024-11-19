@@ -7,6 +7,11 @@ const PerformanceMetrics = () => {
     { label: 'Task Completion Rate', value: '90%' },
     { label: 'Performance Reviews', value: '4.5/5' },
   ];
+  // const metrics = [
+  //   { label: 'Attendance', value: employee?.attendance || 'N/A' },
+  //   { label: 'Task Completion Rate', value: employee?.taskCompletionRate || 'N/A' },
+  //   { label: 'Performance Reviews', value: employee?.performanceReviews || 'N/A' },
+  // ];
 
   return (
     <Card className="mt-2" >
