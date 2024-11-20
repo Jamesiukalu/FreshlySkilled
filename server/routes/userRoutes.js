@@ -1,6 +1,8 @@
 const express = require('express');
 const User = require('../models/User');
 const router = express.Router();
+const multer = require('multer');
+const path = require('path');
 
 
 router.get('/', async (req, res) => {
@@ -14,9 +16,21 @@ router.get('/', async (req, res) => {
   }
 });
 
+// Set up storage configuration for multer
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/'); // Specify the upload directory
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + '-' + file.originalname); // Store the file with a unique name
+  }
+});
+
+const upload = multer({ storage: storage });
 // POST route to register a user
 router.post('/register', async (req, res) => {
-  const { name, email, password, phone, location, picture, role, dateOfEmployment } = req.body;
+  const { name, email, password, phone, location, role, dateOfEmployment } = req.body;
+  const picture = req.file ? req.file.path : '';
 
   try {
     // Check if a user with the same email already exists

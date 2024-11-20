@@ -20,14 +20,14 @@ const Login = ({ onLogin }) => {
 
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/users/login',
+        'http://18.234.215.162:5000/api/users/login',
         { email: credential, password }, 
         { withCredentials: true } 
       );
 
 
       localStorage.setItem('user', JSON.stringify(response.data.user));
-      console.log(localStorage.getItem('user'))
+      //console.log(localStorage.getItem('user'))
       navigate('/dashboard');
     } catch (error) {
       console.error("Login error:", error);
