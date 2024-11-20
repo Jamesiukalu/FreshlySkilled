@@ -11,7 +11,7 @@ const PORT = 5000;
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:5173', 'https://techtalize.netlify.app/'],
+  origin: ['http://localhost:3000', 'http://localhost:5173', 'https://techtalize.netlify.app/', '18.234.215.162'],
   credentials: true,
 }));
 
