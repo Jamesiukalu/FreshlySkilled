@@ -1,10 +1,22 @@
 const express = require('express');
-const User = require('../models/User'); // Adjust the path if necessary
+const User = require('../models/User');
 const router = express.Router();
+
+
+router.get('/', async (req, res) => {
+  try {
+    const users = await User.find(); // Fetch all users
+    console.log('Database Users:', users); // Log users to the console
+    res.status(200).json(users); // Optional: Return users to the browser
+  } catch (error) {
+    console.error('Error fetching users:', error);
+    res.status(500).json({ message: 'Failed to fetch users', error });
+  }
+});
 
 // POST route to register a user
 router.post('/register', async (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, password, phone, location, picture, role, dateOfEmployment } = req.body;
 
   try {
     // Check if a user with the same email already exists
@@ -14,12 +26,34 @@ router.post('/register', async (req, res) => {
     }
 
     // Create a new user
-    const user = new User({ name, email, password });
+    const user = new User({ 
+      name,
+      email,
+      password,
+      phone,
+      location,
+      picture,
+      role,
+      dateOfEmployment
+     });
     await user.save();
 
     res.status(201).send({ message: 'User created successfully', user });
   } catch (err) {
     res.status(400).send({ error: 'Failed to create user', details: err.message });
+  }
+});
+
+// Route to get a user by ID
+router.get('/:id', async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id);
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+    res.json(user);
+  } catch (err) {
+    res.status(500).json({ message: 'Error fetching user', error: err });
   }
 });
 
@@ -46,22 +80,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// router.put('/update', async (req, res) => {
-//   try {
-//     const { userId } = req.user; // Assuming you have user authentication middleware
-//     const updatedProfile = req.body; // The updated profile data from the request
 
-//     // Update user in the database
-//     const updatedUser = await User.findByIdAndUpdate(userId, updatedProfile, { new: true });
-
-//     // Respond with the updated user data
-//     res.json({ message: 'Profile updated successfully', user: updatedUser });
-//   } catch (error) {
-//     res.status(500).json({ message: 'Error updating profile', error: error.message });
-//   }
-// });
-// PUT route to update user profile
-// Middleware to verify JWT token
 const authenticateToken = (req, res, next) => {
   const token = req.headers['authorization']?.split(' ')[1]; // Get token from the Authorization header
 

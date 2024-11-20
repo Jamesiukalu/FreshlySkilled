@@ -1,14 +1,15 @@
 const mongoose = require('mongoose');
 
+// Define the user schema
 const userSchema = new mongoose.Schema({
   name: {
-    title: { type: String, required: true },
-    first: { type: String, required: true },
-    last: { type: String, required: true }
+    title: { type: String },
+    first: { type: String },
+    last: { type: String }
   },
-  email: { type: String, required: true, unique: true  },
+  email: { type: String, required: true },
   password: { type: String, required: true },
-  phone: { type: String },
+  phone: { type: String, required: true },
   location: {
     city: { type: String },
     state: { type: String }
@@ -18,9 +19,10 @@ const userSchema = new mongoose.Schema({
   },
   role: { type: String },
   dateOfEmployment: { type: Date },
-  __v: { type: Number }
+  __v: { type: Number, default: 0 }
 });
 
-const User = mongoose.model('User', userSchema);
+// Ensure it's mapped to the correct collection
+const User = mongoose.model('User', userSchema, 'techtalize'); 
 
 module.exports = User;
