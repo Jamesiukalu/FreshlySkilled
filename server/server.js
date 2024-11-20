@@ -4,14 +4,19 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 require('dotenv').config({ path: './config.env' });
 
-const userRoutes = require('./routes/userRoutes'); // Adjust path if necessary
+const userRoutes = require('./routes/userRoutes'); 
 
 const app = express();
 const PORT = 5000;
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:5173', 'https://techtalize.netlify.app/', '18.234.215.162'],
+  origin: [
+    'http://localhost:3000',
+    'http://localhost:5173',
+    'https://techtalize.netlify.app/',
+    'http://18.234.215.162',
+  ],
   credentials: true,
 }));
 
@@ -29,7 +34,7 @@ app.get('/', (req, res) => {
 });
 
 // Test DB Route
-const User = require('./models/User'); // Adjust path
+const User = require('./models/User'); // Adjust path if necessary
 app.get('/test-db', async (req, res) => {
   try {
     const users = await User.find();
@@ -38,10 +43,12 @@ app.get('/test-db', async (req, res) => {
     res.status(500).json({ message: 'Database query failed', error });
   }
 });
+
 // API Routes
 app.use('/api/users', userRoutes);
 
 // Start Server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server is running on http://0.0.0.0:${PORT}`);
 });
+
