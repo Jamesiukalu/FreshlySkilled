@@ -1,5 +1,5 @@
-const AWS = require('aws-sdk');
 require('dotenv').config({ path: '../config.env' });
+const AWS = require('aws-sdk');
 
 // Load AWS credentials from environment variables
 AWS.config.update({
