@@ -2,7 +2,8 @@ const express = require('express');
 const User = require('../models/User');
 const router = express.Router();
 const multer = require('multer');
-const path = require('path');
+const multerS3 = require('multer-s3');
+
 const s3 = require('../config/awsConfig');  // AWS S3 configuration
 
 
