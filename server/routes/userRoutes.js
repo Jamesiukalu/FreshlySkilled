@@ -3,6 +3,7 @@ const User = require('../models/User');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
+const s3 = require('../config/awsConfig');  // AWS S3 configuration
 
 
 router.get('/', async (req, res) => {
@@ -16,21 +17,25 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Set up storage configuration for multer
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, 'uploads/'); // Specify the upload directory
-  },
-  filename: function (req, file, cb) {
-    cb(null, Date.now() + '-' + file.originalname); // Store the file with a unique name
-  }
+// Set up multer-s3 for file upload directly to S3
+const upload = multer({
+  storage: multerS3({
+    s3: s3,
+    bucket: process.env.AWS_S3_BUCKET_NAME,
+    acl: 'public-read', // Allows the uploaded file to be publicly accessible
+    metadata: function (req, file, cb) {
+      cb(null, { fieldName: file.fieldname });
+    },
+    key: function (req, file, cb) {
+      // Set a unique file name using the current timestamp
+      cb(null, Date.now().toString() + '-' + file.originalname);
+    }
+  })
 });
 
-const upload = multer({ storage: storage });
 // POST route to register a user
-router.post('/register', async (req, res) => {
+router.post('/register',upload.single('picture'), async (req, res) => {
   const { name, email, password, phone, location, role, dateOfEmployment } = req.body;
-  const picture = req.file ? req.file.path : '';
 
   try {
     // Check if a user with the same email already exists
@@ -38,6 +43,8 @@ router.post('/register', async (req, res) => {
     if (existingUser) {
       return res.status(409).send({ error: 'User with this email already exists' }); // 409 Conflict
     }
+ // Get the uploaded file URL from S3
+ const pictureUrl = req.file ? req.file.location : ''; // req.file.location contains the S3 URL
 
     // Create a new user
     const user = new User({ 
@@ -46,7 +53,7 @@ router.post('/register', async (req, res) => {
       password,
       phone,
       location,
-      picture,
+      picture: { large: pictureUrl },
       role,
       dateOfEmployment
      });
