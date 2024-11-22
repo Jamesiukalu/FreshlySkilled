@@ -1,4 +1,4 @@
-require('dotenv').config({ path: './config.env' });
+require('dotenv').config({ path: './.env' });
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -12,7 +12,7 @@ const PORT = 5000;
 // Middleware
 app.use(cors({
   origin: [
-    'http://localhost:3000',
+    'http://localhost:5000',
     'http://localhost:5173',
     'https://techtalize.netlify.app/',
     'http://18.234.215.162',
@@ -48,10 +48,10 @@ app.get('/test-db', async (req, res) => {
 app.use('/api/users', userRoutes);
 
 // Start Server
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server is running on http://0.0.0.0:${PORT}`);
-});
-
-// app.listen(PORT, () => {
-//   console.log(`Server is running on http://localhost:${PORT}`);
+// app.listen(PORT, '0.0.0.0', () => {
+//   console.log(`Server is running on http://0.0.0.0:${PORT}`);
 // });
+
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});

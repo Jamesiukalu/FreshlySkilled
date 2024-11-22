@@ -3,8 +3,6 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import image from "../assets/img/login.jpg";
-import WOW from 'wow.js';
-import $ from 'jquery';
 import Hero from '../components/Hero';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -20,7 +18,8 @@ const Login = ({ onLogin }) => {
 
     try {
       const response = await axios.post(
-        'http://18.234.215.162:5000/api/users/login',
+       'http://localhost:5000/api/users/login/',
+        // 'http://18.234.215.162:5000/api/users/login',
         { email: credential, password }, 
         { withCredentials: true } 
       );
