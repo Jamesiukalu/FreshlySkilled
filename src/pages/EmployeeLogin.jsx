@@ -18,8 +18,8 @@ const Login = ({ onLogin }) => {
 
     try {
       const response = await axios.post(
-       'http://localhost:5000/api/users/login/',
-        // 'http://18.234.215.162:5000/api/users/login',
+      //  'http://localhost:5000/api/users/login/',
+        'http://18.234.215.162:5000/api/users/login',
         { email: credential, password }, 
         { withCredentials: true } 
       );

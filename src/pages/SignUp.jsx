@@ -102,8 +102,8 @@ const SignUp = () => {
         if (formData.picture.large) {
           formData.append('picture', formData.picture.large);
         }
-        // const response = await axios.post('http://18.234.215.162:5000/api/users/register', formData, {
-          const response = await axios.post('http://localhost:5000/api/users/register', formData, {
+        const response = await axios.post('http://18.234.215.162:5000/api/users/register', formData, {
+          // const response = await axios.post('http://localhost:5000/api/users/register', formData, {
           headers: {
             'Content-Type': 'multipart/form-data'
           }
