@@ -23,8 +23,13 @@ const Login = ({ onLogin }) => {
         { withCredentials: true } 
       );
 
+          // Store user details and token in localStorage
+    const { user, token } = response.data; // Extract token from the response
+    localStorage.setItem('user', JSON.stringify(user));
+    localStorage.setItem('token', token); // Store the token for authentication
 
-      localStorage.setItem('user', JSON.stringify(response.data.user));
+
+      // localStorage.setItem('user', JSON.stringify(response.data.user));
       //console.log(localStorage.getItem('user'))
       navigate('/dashboard');
     } catch (error) {

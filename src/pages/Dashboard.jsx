@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+
+import axios from "axios";
 import { Container, Navbar, NavDropdown, Row, Col, Nav, Card, Button, OverlayTrigger, Tooltip } from "react-bootstrap";
 import mainlogo from '../assets/img/Tech brand4.png';
 import EmployeeInfo from "../components/Dashboard/EmployeeInfo";
@@ -35,7 +37,7 @@ const Dashboard = () => {
        // Get the JWT token from localStorage
       const token = localStorage.getItem('token');
       // Send the updated profile to the backend using PUT request
-      const response = await axios.put('http://localhost:5000/api/users/update', updatedProfile, { 
+      const response = await axios.put('https://api.okwelomo.site:5000/api/users/update', updatedProfile, { 
         headers: {
           Authorization: `Bearer ${token}` // Include the JWT token in the header
         },
@@ -45,11 +47,11 @@ const Dashboard = () => {
       // Update the state with the updated profile data
       setProfileData(response.data.user);
       setEmployee(response.data.user); // Optionally update the employee state
-  
+      console.log("Profile saved successfully:", response.data);
       setIsEditing(false); // Exit edit mode
       // console.log("Updated Profile Data:", response.data.user);
     } catch (error) {
-      console.error("Error saving profile:", error);
+      console.error("Error saving profile:", error.response?.data || error.message);
       // Handle the error (show message, etc.)
     }
   };
@@ -120,6 +122,7 @@ const Dashboard = () => {
                           employee={profileData || {}}
                           isEditing={isEditing}
                           onSave={handleSave}
+                          setIsEditing={setIsEditing}
                         />
                       </Card.Body>
                     </Card>

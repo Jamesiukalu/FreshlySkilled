@@ -3,11 +3,19 @@ import Wrapper from "../components/Wrapper";
 import Title from "../components/Title";
 import Subtitle from "../components/Subtitle";
 
+
 import bogliasco from '../assets/img/hero1.jpg';
 import countyClare from '../assets/img/hero2.jpg';
 import craterRock from '../assets/img/hero3.jpg';
 import giauPass from '../assets/img/hero4.jpg';
 import { Link } from "react-router-dom";
+
+// const imageUrls = {
+//   bogliasco: 'https://storage.cloud.google.com/techtalize/img/hero1.jpg',
+//   countyClare: 'https://storage.cloud.google.com/techtalize/img/hero2.jpg',
+//   craterRock: 'https://storage.cloud.google.com/techtalize/img/hero3.jpg',
+//   giauPass: 'https://storage.cloud.google.com/techtalize/img/hero4.jpg',
+// };
 
 // const bogliasco = "bogliasco";
 // const countyClare = "countyClare";
@@ -55,7 +63,7 @@ export default function Header() {
               backgroundImageSrc: giauPass,
               backgroundAttachment: "fixed"
             }}
-          />
+            />
     
           <Slide
             shouldRenderMask

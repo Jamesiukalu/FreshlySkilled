@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Card, ListGroup, ListGroupItem, Form, Button } from 'react-bootstrap';
 
-const EmployeeInfo = ({ employee, isEditing, onSave }) => {
+const EmployeeInfo = ({ employee, isEditing, onSave, setIsEditing }) => {
   const [formData, setFormData] = useState(employee);
   const formattedDOE = new Date(employee.dateOfEmployment).toLocaleDateString();
 
@@ -85,6 +85,9 @@ const EmployeeInfo = ({ employee, isEditing, onSave }) => {
             <ListGroupItem>DOE: {formattedDOE}</ListGroupItem>
             <ListGroupItem>Location: {employee.location.city}, {employee.location.state}</ListGroupItem> 
           </ListGroup>
+          <Button variant="secondary" onClick={() => setIsEditing(true)}>
+              Edit Profile
+            </Button>
           </>
         )}
         </Card.Body>
