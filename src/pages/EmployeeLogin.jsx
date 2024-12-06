@@ -29,7 +29,8 @@ const Login = ({ onLogin }) => {
     localStorage.setItem('token', token); // Store the token for authentication
 
 
-      // localStorage.setItem('user', JSON.stringify(response.data.user));
+    console.log('Token:', token); // Log the token to check its validity
+
       //console.log(localStorage.getItem('user'))
       navigate('/dashboard');
     } catch (error) {

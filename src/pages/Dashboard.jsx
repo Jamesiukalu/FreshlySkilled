@@ -48,6 +48,8 @@ const Dashboard = () => {
       setProfileData(response.data.user);
       setEmployee(response.data.user); // Optionally update the employee state
       console.log("Profile saved successfully:", response.data);
+      console.log('Token:', token); // Log the token to check its validity
+
       setIsEditing(false); // Exit edit mode
       // console.log("Updated Profile Data:", response.data.user);
     } catch (error) {
