@@ -37,7 +37,7 @@ const Dashboard = () => {
        // Get the JWT token from localStorage
       const token = localStorage.getItem('token');
       // Send the updated profile to the backend using PUT request
-      const response = await axios.put('https://api.okwelomo.site:5000/api/users/update', updatedProfile, { 
+      const response = await axios.put('http://api.okwelomo.site:5000/api/users/update', updatedProfile, { 
         headers: {
           Authorization: `Bearer ${token}` // Include the JWT token in the header
         },

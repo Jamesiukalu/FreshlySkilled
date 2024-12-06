@@ -18,7 +18,7 @@ const Login = ({ onLogin }) => {
 
     try {
       const response = await axios.post(
-        'https://api.okwelomo.site:5000/api/users/login',
+        'http://api.okwelomo.site:5000/api/users/login',
         { email: credential, password }, 
         { withCredentials: true } 
       );
