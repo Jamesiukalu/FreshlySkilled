@@ -38,7 +38,19 @@ const upload = multer({
 
 // POST route to register a user
 router.post('/register', async (req, res) => {
-  const { name, email, password, phone, location, role, dateOfEmployment, picture } = req.body;
+  const {
+    "name.title": title,
+    "name.first": firstName,
+    "name.last": lastName,
+    email,
+    password,
+    phone,
+    "location.city": city,
+    "location.state": state,
+    role,
+    dateOfEmployment,
+  } = req.body;
+  
 
   try {
     // Check if a user with the same email already exists
