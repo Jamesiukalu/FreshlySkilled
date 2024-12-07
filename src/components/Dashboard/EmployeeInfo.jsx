@@ -85,9 +85,6 @@ const EmployeeInfo = ({ employee, isEditing, onSave, setIsEditing }) => {
             <ListGroupItem>DOE: {formattedDOE}</ListGroupItem>
             <ListGroupItem>Location: {employee.location.city}, {employee.location.state}</ListGroupItem> 
           </ListGroup>
-          <Button variant="secondary" onClick={() => setIsEditing(true)}>
-              Edit Profile
-            </Button>
           </>
         )}
         </Card.Body>

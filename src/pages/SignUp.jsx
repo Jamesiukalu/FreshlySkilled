@@ -71,54 +71,63 @@ const SignUp = () => {
     };    
     const handleFileChange = (e) => {
       const file = e.target.files[0];
-      setFormData((prev) => ({
-        ...prev,
-        picture: {
-          ...prev.picture,
-          large: file,
-        },
-      }));
+      if (file) {
+        console.log(file.name); 
+        setFormData((prev) => ({
+          ...prev,
+          picture: {
+            ...prev.picture,
+            large: file, // Assign the file object
+          },
+        }));
+      }
     };
-    
+      
     const handleSubmit = async (e) => {
       e.preventDefault();
       try {
         setLoading(true);
-        
+    
         // Create FormData object
-        const formData = new FormData();
-        formData.append('name.title', formData.name.title);
-        formData.append('name.first', formData.name.first);
-        formData.append('name.last', formData.name.last);
-        formData.append('email', formData.email);
-        formData.append('password', formData.password);
-        formData.append('phone', formData.phone);
-        formData.append('location.city', formData.location.city);
-        formData.append('location.state', formData.location.state);
-        formData.append('role', formData.role);
-        formData.append('dateOfEmployment', formData.dateOfEmployment);
-        
-        // Append file (make sure it's the correct input name)
+        const requestData = new FormData(); // Renamed to avoid conflict
+        requestData.append('name.title', formData.name.title);
+        requestData.append('name.first', formData.name.first);
+        requestData.append('name.last', formData.name.last);
+        requestData.append('email', formData.email);
+        requestData.append('password', formData.password);
+        requestData.append('phone', formData.phone);
+        requestData.append('location.city', formData.location.city);
+        requestData.append('location.state', formData.location.state);
+        requestData.append('role', formData.role);
+        requestData.append('dateOfEmployment', formData.dateOfEmployment);
+    
+        // Append file (ensure correct input handling)
         if (formData.picture.large) {
-          formData.append('picture', formData.picture.large);
+          requestData.append('picture', formData.picture.large);
         }
-        const response = await axios.post('https://api.okwelomo.site:5000/api/users/register', formData, {
-          // const response = await axios.post('http://localhost:5000/api/users/register', formData, {
-          headers: {
-            'Content-Type': 'multipart/form-data'
+    
+        const response = await axios.post(
+          'http://api.okwelomo.site:5000/api/users/register',
+          requestData,
+          {
+            headers: {
+              'Content-Type': 'multipart/form-data',
+            },
           }
-        });
+        );
     
         setLoading(false);
         setSuccess(response.data.message);
-        setError("");
-        navigate("/login"); // Redirect to login page after successful registration
+        setError('');
+        navigate('/login'); // Redirect to login page
       } catch (error) {
         setLoading(false);
-        setError(error.response?.data?.message || "Failed to register. Please try again.");
-        setSuccess("");
+        console.error(error.response?.data || error.message);
+        setError(error.response?.data?.message || 'An unexpected error occurred.');
+        setSuccess('');
       }
     };
+    
     
     return (
         <>

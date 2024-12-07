@@ -37,8 +37,8 @@ const upload = multer({
 });
 
 // POST route to register a user
-router.post('/register',upload.single('picture'), async (req, res) => {
-  const { name, email, password, phone, location, role, dateOfEmployment } = req.body;
+router.post('/register', async (req, res) => {
+  const { name, email, password, phone, location, role, dateOfEmployment, picture } = req.body;
 
   try {
     // Check if a user with the same email already exists
@@ -47,7 +47,17 @@ router.post('/register',upload.single('picture'), async (req, res) => {
       return res.status(409).send({ error: 'User with this email already exists' }); // 409 Conflict
     }
  // Get the uploaded file URL from S3
- const pictureUrl = req.file ? req.file.location : ''; // req.file.location contains the S3 URL
+//  const pictureUrl = req.file ? req.file.location : ''; // req.file.location contains the S3 URL
+ let pictureUrl = '';
+
+ // Handle uploaded image logic or direct image URL
+ if (req.file) {
+   // If a file is uploaded via S3
+   pictureUrl = req.file.location;
+ } else if (picture?.large) {
+   // If a direct image URL is passed
+   pictureUrl = picture.large;
+ }
 
     // Create a new user
     const user = new User({ 
