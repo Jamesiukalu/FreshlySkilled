@@ -44,7 +44,6 @@ app.get('/test-db', async (req, res) => {
   }
 });
 
-// API Routes
 app.use('/api/users', userRoutes);
 
 // Start Server
