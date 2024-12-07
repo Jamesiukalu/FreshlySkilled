@@ -3,16 +3,16 @@ const mongoose = require('mongoose');
 // Define the user schema
 const userSchema = new mongoose.Schema({
   name: {
-    title: { type: String },
-    first: { type: String },
-    last: { type: String }
+    title: { type: String, default: ""  },
+    first: { type: String, default: ""  },
+    last: { type: String, default: ""  }
   },
   email: { type: String, required: true },
   password: { type: String, required: true },
   phone: { type: String, required: true },
   location: {
-    city: { type: String },
-    state: { type: String }
+    city: { type: String, default: ""  },
+    state: { type: String, default: ""  }
   },
   picture: {
     large: { type: String }

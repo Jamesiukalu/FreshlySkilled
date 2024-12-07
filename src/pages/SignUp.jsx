@@ -88,6 +88,7 @@ const SignUp = () => {
         requestData.append('name.title', formData.name.title);
         requestData.append('name.first', formData.name.first);
         requestData.append('name.last', formData.name.last);
+        
         requestData.append('email', formData.email);
         requestData.append('password', formData.password);
         requestData.append('phone', formData.phone);
