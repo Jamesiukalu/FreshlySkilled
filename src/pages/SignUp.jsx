@@ -69,27 +69,22 @@ const SignUp = () => {
         }));
       }
     };    
-    const handleFileChange = (e) => {
+    const handleFileChange = async (e) => {
       const file = e.target.files[0];
       if (file) {
-        console.log(file.name); 
         setFormData((prev) => ({
           ...prev,
-          picture: {
-            ...prev.picture,
-            large: file, // Assign the file object
-          },
+          picture: file, // Store the actual file object
         }));
       }
     };
-      
+    
     const handleSubmit = async (e) => {
       e.preventDefault();
       try {
         setLoading(true);
     
-        // Create FormData object
-        const requestData = new FormData(); // Renamed to avoid conflict
+        const requestData = new FormData();
         requestData.append('name.title', formData.name.title);
         requestData.append('name.first', formData.name.first);
         requestData.append('name.last', formData.name.last);
@@ -101,9 +96,17 @@ const SignUp = () => {
         requestData.append('role', formData.role);
         requestData.append('dateOfEmployment', formData.dateOfEmployment);
     
-        // Append file (ensure correct input handling)
-        if (formData.picture.large) {
+        if (formData.picture.large instanceof File) {
           requestData.append('picture', formData.picture.large);
+        } else {
+          const fallbackURL = "https://randomuser.me/api/portraits/men/75.jpg";
+          requestData.append('picture', fallbackURL); // Pass URL directly
+        }
+        
+    
+        console.log("Sending payload...");
+        for (let [key, value] of requestData.entries()) {
+          console.log(key, value);
         }
     
         const response = await axios.post(
@@ -119,7 +122,7 @@ const SignUp = () => {
         setLoading(false);
         setSuccess(response.data.message);
         setError('');
-        navigate('/login'); // Redirect to login page
+        navigate('/login');
       } catch (error) {
         setLoading(false);
         console.error(error.response?.data || error.message);
@@ -263,10 +266,9 @@ const SignUp = () => {
                         <input
                           type="file"
                           name="picture.large"
-                          id="image"
+                          id="fileInput"
                           className="form-control"
                           onChange={handleFileChange}
-                          required
                         />
                       </div>
                       <div className="form-group">
