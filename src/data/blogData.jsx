@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 const blogs = [
   {
     slug: "power-of-collaboration",
-    link: "/blog/power-of-collaboration",
     image: collaboration,
     excerpt:
       "In today's fast-paced world, the ability to collaborate effectively is more crucial than ever. At Techtalize, we believe that collaboration and curiosity can reshape the way we learn, connect, and share ideas. This blog explores the power of collaboration in enhancing learning, particularly through project-based internships, and how joining Techtalize can provide aspiring professionals with invaluable experiences.",
@@ -126,7 +125,6 @@ const blogs = [
   },
   {
     slug: "unlocking-your-potential",
-    link: "/blog/unlocking-your-potential",
     image: collaboration,
     excerpt:
       "Curiosity-driven learning is a powerful tool for unlocking your potential in your career. By embracing curiosity and taking ownership of your learning, you can develop the skills and knowledge you need to succeed in your chosen field.",
@@ -263,7 +261,6 @@ const blogs = [
   },
   {
     slug: "building-global-network",
-    link: "/blog/building-global-network",
     image: collaboration,
     excerpt:
       "International experience is a valuable asset in today's globalized world. By working or studying abroad, you can develop a global perspective, build cross-cultural communication skills, and expand your professional network.",
@@ -351,7 +348,6 @@ const blogs = [
   },
   {
     slug: "invest-in-project-based-interns",
-    link: "/blog/invest-in-project-based-interns",
     image: collaboration,
     excerpt:
       "Project-based internships offer numerous benefits to companies, from fresh perspectives and innovative ideas to increased productivity and employee engagement. By investing in project-based interns, companies can cultivate a pipeline of talented professionals and drive business growth.",
@@ -481,7 +477,6 @@ const blogs = [
   },
   {
     slug: "code-without-borders",
-    link: "/blog/code-without-borders",
     image: collaboration,
     excerpt:
       "Technology has revolutionized the way we collaborate and communicate on a global scale. By breaking down geographical barriers and connecting people from diverse backgrounds, technology has transformed the way we work, learn, and innovate.",
@@ -631,7 +626,6 @@ const blogs = [
   },
   {
     slug: "top-career-paths-software-engineers",
-    link: "/blog/top-career-paths-software-engineers",
     image: collaboration,
     excerpt:
       "Software engineering is a versatile field with a wide range of career paths to explore. From web development and mobile app design to data science and cybersecurity, software engineers have numerous opportunities to specialize and advance their careers.",
@@ -846,7 +840,6 @@ const blogs = [
   },
   {
     slug: "becoming-exceptional-software-developer",
-    link: "/blog/becoming-exceptional-software-developer",
     image: collaboration,
     excerpt:
       "Exceptional software developers share common traits that set them apart from their peers. By cultivating a growth mindset, embracing continuous learning, and honing their technical and soft skills, aspiring developers can become exceptional professionals in the field.",
@@ -1037,7 +1030,6 @@ const blogs = [
   },
   {
     slug: "essential-skills-junior-senior-developer",
-    link: "/blog/essential-skills-junior-senior-developer",
     image: collaboration,
     excerpt:
       "Transitioning from a junior to a senior developer requires more than technical expertise. Senior developers possess a unique set of skills, including leadership, mentorship, and project management abilities, that set them apart in the industry.",
@@ -1212,7 +1204,6 @@ const blogs = [
   },
   {
     slug: "finding-pathway-software-developer-career",
-    link: "/blog/finding-pathway-software-developer-career",
     image: collaboration,
     excerpt:
       "The software development industry offers a wide range of career pathways to explore, from web development and mobile app design to data science and cybersecurity. By identifying your interests, acquiring the necessary skills, and seeking mentorship, you can navigate your career path with confidence and success.",
@@ -1376,7 +1367,6 @@ const blogs = [
   },
   {
     slug: "fixing-mindset-think-like-programmer",
-    link: "/blog/fixing-mindset-think-like-programmer",
     image: collaboration,
     excerpt:
       "Adopting a programmer's mindset involves developing problem-solving skills, embracing challenges, and cultivating a growth mindset. By thinking like a programmer, you can approach complex problems with confidence, creativity, and resilience.",

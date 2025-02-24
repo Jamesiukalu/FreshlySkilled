@@ -72,9 +72,9 @@ const BlogsPage = () => {
                       <h5 className="card-title">{blog.title}</h5>
                       <p className="card-text">{blog.excerpt}</p>
                         <div className="mt-auto">
-                          <a href={blog.link} className="btn btn-primary">
+                          <Link to={`/blog/${blog.slug}`} className="btn btn-primary">
                             Read More
-                          </a>
+                          </Link>
                         </div>
                     </div>
                     <div className="card-footer text-muted">
