@@ -6,6 +6,7 @@ import Hero from '../components/Hero';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import blogs from '../data/blogData.jsx';
+import { Link } from 'react-router-dom';
 
 const BlogsPage = () => {
   const [loading, setLoading] = useState(true);
