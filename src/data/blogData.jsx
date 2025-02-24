@@ -1,4 +1,4 @@
-import collaboration from "../assets/img/collaboration.jpg";
+import collaboration from "../assets/img/hero2.jpg";
 import { Link } from "react-router-dom";
 
 const blogs = [
