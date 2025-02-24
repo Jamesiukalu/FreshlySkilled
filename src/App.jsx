@@ -11,7 +11,8 @@ import JobDetail from './pages/JobDetail';
 import JobList from './pages/JobList';
 import JobCategories from './pages/JobCategories';
 import TechStack from './pages/TechStack';
-import TestimonialPage from './pages/TestimonialPage';
+import BlogsPage from './pages/Blogs';
+import BlogPostPage from './pages/BlogPostPage';
 import Faq from './pages/Faq';
 import Methodology from './pages/Methodology';
 import SignUp from './pages/SignUp';
@@ -38,7 +39,8 @@ function App() {
         <Route path="/job-list" element={<JobList />} />
         <Route path="/job-categories" element={<JobCategories />} />
         <Route path="/tech-stack" element={<TechStack />} />
-        <Route path="/testimonialPage" element={<TestimonialPage />} />
+        <Route path="/blogs" element={<BlogsPage />} />
+        <Route path="/blog/:slug" element={<BlogPostPage />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/methodology" element={<Methodology />} />
         <Route path="/signup" element={<SignUp />} />

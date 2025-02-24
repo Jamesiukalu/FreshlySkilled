@@ -34,7 +34,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <NavLink to="/job-list" className={({ isActive }) => isActive ? "nav-item nav-link active" : "nav-item nav-link"}>Apply</NavLink>
-                    <NavLink to="/testimonialPage" className={({ isActive }) => isActive ? "nav-item nav-link active" : "nav-item nav-link"}>Testimonial</NavLink>
+                    <NavLink to="/blogs" className={({ isActive }) => isActive ? "nav-item nav-link active" : "nav-item nav-link"}>Blogs</NavLink>
                     <div className="nav-item dropdown">
                         <a href="#" className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">What&apos;s New</a>
                         <div className="dropdown-menu rounded-0 m-0">
